@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script defer src="/js/client.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <title>Sofi-Эль</title>
+</head>
+
+<body>
+
+  <ul class="nav">
+    <li class="nav-item">
+      <h3 class="logo"><a href="/">Sofi-Эль</a></h3>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-info " href="#about">О нас</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-info" href="#preim">Наши преимущества</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-info" href="#catalog">Каталог</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-info" href="#map">Контакты</a>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Оставить
+        заявку</button>
+    </li>
+  </ul>
+
+  {{{body}}}
+
+<div class="footer">
+  <div class="first">
+    <ul class="footer-ul">
+   <a href="#about"><li>О нас</li></a>
+      <a href="#preim"><li>Наши преимущества</li></a>
+   <a href="#catalog"><li>Каталог</li></a>
+   <a href="#map"><li>Контакты</li></a>
+    </ul>
+
+  </div>
+  <div class="second">
+    <ul class="footer-ul">
+      <a href="/shower"><li>Душевые перегородки</li></a>
+     <a href="/doors"> <li>Межкомнатные двери</li></a>
+      <a href="/mirror"><li>Зеркала</li></a>
+      <a href="/euro-mirror"><li>Еврозеркала</li></a>
+      <a href="/shelves"><li>Полки, витрины, УФ склейка</li></a>
+      <a href="/skinali"><li>Скинали</li></a>
+    </ul>
+
+  </div>
+  <div class="third">
+    <b>Контакты</b><br>
+    <span>ТЦ "Твой Дом" Крокус Сити 66 км МКАД , Москва
+<br>sofielle.st2020@gmail.com
+<br>+74957272415</span>
+    {{#if isAuth}}
+      <a href="/logout">&times</a>
+      {{else}}
+      <a href="/auth" style="color: #3BAFDA">◻</a>
+      {{/if}}
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <form action="/" method="POST">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Узнать больше</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="validationDefault01" class="form-label">Введите имя</label>
+            <input type="text" name="name" class="form-control" id="validationDefault01" required>
+          </div>
+          <div class="modal-body">
+            <label for="validationDefault01" class="form-label">Телефон</label>
+            <input type="text" name="phone" class="form-control" id="validationDefault02" required>
+          </div>
+          <div class="modal-body">
+            <label for="exampleFormControlTextarea1">Ваше сообщение</label>
+            <textarea name="message" rows="3" class="form-control" id="exampleFormControlTextarea1"></textarea>
+          </div>
+          <div class="modal-body">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="val" id="exampleRadios1" value="1">
+              <label class="form-check-label" for="exampleRadios1">
+                Рассчитать стоимость
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="val" id="exampleRadios2" value="0">
+              <label class="form-check-label" for="exampleRadios2">
+                Сделать замер
+              </label>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

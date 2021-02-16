@@ -1,0 +1,23 @@
+{
+  "name": "GlassShop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd ./server && npm i && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikStone228/GlassShop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikStone228/GlassShop/issues"
+  },
+  "homepage": "https://github.com/NikStone228/GlassShop#readme"
+}
